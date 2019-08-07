@@ -1,4 +1,4 @@
-##JVM 이란?
+## JVM 이란?
 >자바 가상머신으로 자바 바이트 코드를 실행할 수 있는 주체
 
 <br>
@@ -12,7 +12,7 @@ JVM 역할
 
 ___
 
-##JVM 구성
+## JVM 구성
 
 JVM 구성은 크게 4가지로 나눌 수 있습니다.
 ```
@@ -34,7 +34,7 @@ Class Loader, Execution Engine, Garbage Collector, Runtime Data Area
 
 ___
 
-##Runtime Data Area
+## Runtime Data Area
 
 Java 어플리케이션을 실행하면서 할당받은 메모리 영역. Class Loader에서 준비한 데이터들을 보관하는 저장소.
 
@@ -91,10 +91,10 @@ Method(Static) Area, Heap Area, Stack Area, PC Register, Native Method Stack
 
 ___
 
->**참고한 자료**
-https://hoonmaro.tistory.com/19
-https://qlyh8.tistory.com/178
-https://jeong-pro.tistory.com/148
+>**참고한 자료**  
+https://hoonmaro.tistory.com/19  
+https://qlyh8.tistory.com/178  
+https://jeong-pro.tistory.com/148  
 
->**수정이력**
+>**수정이력**  
 2019.08.07 최초작성
