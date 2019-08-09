@@ -75,6 +75,7 @@ Method(Static) Area, Heap Area, Stack Area, PC Register, Native Method Stack
     - 메소드 정보, 지역변수, 매개변수, 연산 중 발생하는 임시 데이터 저장
     - 기본(원시)타입 변수는 스택 영역에 직접 값을 가진다.
     - 참조타임 변수는 힙 영역이나 메소드 영역의 객체 주소를 가진다.
+<br>
 
 - PC Register
     - 현재 수행 중인 JVM 명령 주소를 갖는다.
