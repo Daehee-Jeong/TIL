@@ -62,3 +62,8 @@ alter table parent_children
 여기서 만약 Child 객체가 Primary Key를 갖게될 경우 Error를 발생합니다.
 
 Embeddable 객체는 Primiray Key를 가질 수 없기 때문입니다. 따라서 자식객체가 ID를 갖는 OneToMany의 관계에서는 `@Entity` 를 사용해야 합니다.
+
+___
+
+>**수정이력**  
+2019.08.09 최초작성
