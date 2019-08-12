@@ -18,4 +18,5 @@ ___
 
 ### SQL
 - [Bulk-Insert 성능에 대해](https://github.com/Daehee-Jeong/TIL/blob/master/SQL/bulk-insert-performance.md)
+- [ORACLE PIVOT 함수에 대해](https://github.com/Daehee-Jeong/TIL/blob/master/SQL/oracle-pivot.md)
 <br>
