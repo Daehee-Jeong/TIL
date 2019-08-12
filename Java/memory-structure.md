@@ -86,7 +86,7 @@ Method(Static) Area, Heap Area, Stack Area, PC Register, Native Method Stack
 
 - Native Method Stack Area
     - 자바 외 언어로 작성된 네이티브 코드를 위한 Stack이다.
-    - 즉, JNI(Java Native Interface)를 통해 호출되는 C/C++ 등의 코드를 수행하기 위한 스택이다.
+    - 즉, JNI(Java Native Interface)를 통해 호출되는 C/C++ 등의 코드를 수행하기 위한 스택이다. 
     - 네이티브 메소드의 매개변수, 지역변수 등을 바이트 코드로 저장한다.
 <br>
 
