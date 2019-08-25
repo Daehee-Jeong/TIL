@@ -154,3 +154,23 @@ boot에서는 webapp폴더는 빌딩 중 버려진다. 유의미하지 않다.
 
 리소스는 URI 표준에 따라서 불러질 수 있다.
 
+외부 환경변수 받아오기
+
+스프링 메커니즘에 의해 application/json 요청에 따라 json을 돌려준 것을,
+메커니즘 변경을 통해 다른 결과를 기대할 수 있음
+
+InitializingBean 인터페이스 구현
+CommandLineRunner를 통한 todos 초기화
+ApplicationRunner
+
+@Valid 애노테이션에 구체적 사항을 명시 할 수 있다.
+
+컨텐츠 협상 메커니즘
+스프링에서 기본적으로 json과 xml에 대해서는 지원을 함
+
+AbstractView를 상속받아 만든 새로운 View 의 형태에서
+View와 항상 따라다니는, Resolver를 만들어서 제공
+
+추가된 Resolver들은 ContentsNegotiationManager로 모인다
+
+Collections.unmodifiableList
