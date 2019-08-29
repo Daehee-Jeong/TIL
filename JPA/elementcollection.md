@@ -23,7 +23,7 @@ public class Parent {
 
 예시) 자식클래스 일급컬렉션
 ```java
-@Embeddable
+@Embeddable 
 public class Children {
 
     @ElementCollection
