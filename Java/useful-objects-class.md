@@ -44,11 +44,11 @@ if (Objects.isNonNull(something)) {
 
 null이 들어오면 안될 상황에 대해 수동적으로 검사를 하고, Exception을 내는 식의 코드를 작성한 경험이 종종 있었습니다.
 
-위 메서드 사용을 통해서는 보다 간결하게 값이 존재한다면 초기화를하고, 아닐 시에는 NPE를 발생시키도록 하는 코드의 작성을 더욱 용이하게 해줍니다.
+위 메서드 사용을 통해서 값이 존재한다면 초기화를하고, 아닐 시에는 NPE를 발생시키도록 하는 코드의 작성을 더욱 용이하게 해줍니다.
 
 ```java
 /* str이 null이라면 NPE를 발생시키고, 값이 존재한다면 newStr을 초기화한다 */
-String newStr = requireNonNull(str);
+String newStr = Objects.requireNonNull(str);
 ```
 
 ___
