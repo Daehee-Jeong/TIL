@@ -51,10 +51,27 @@ null이 들어오면 안될 상황에 대해 수동적으로 검사를 하고, E
 String newStr = Objects.requireNonNull(str);
 ```
 
+변형으로 아래와 같이 사용하는 것도 가능합니다.
+
+```java
+/* NPE를 던지지 않고 대체 값을 부여하는 방법 */
+String newStr = Objects.requireNonNull(str, "default value");
+
+/* NPE를 던지지 않고 정의한 동작(람다식)을 수행하는 방법 */
+String newStr = Objects.requireNonNull(str, 
+    () -> {
+        System.getProperty("com.daehee.~~~") // 값이 null일때는 람다식을 수행
+    }
+);
+
+```
+
 ___
 
 >**참고한 자료**  
-https://multifrontgarden.tistory.com/205
+https://multifrontgarden.tistory.com/205  
+https://thebook.io/006985/ch05/01/09/
 
 >**수정이력**  
+2019.09.14 requireNonNull 내용 추가  
 2019.09.11 최초작성
