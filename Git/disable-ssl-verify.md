@@ -13,7 +13,7 @@ git config http.sslVerify false
 
 저의 경우에는 이미 로컬에 존재하는 repository가 아닌 clone을 받아야하는 경우였습니다.
 따라서 `--global` 옵션으로 전역설정을 false로 하였고, clone을 받은 뒤 전역 설정을 원래대로 돌려놓았습니다.
-(clone한 repository는 **false**로 설정)
+(clone한 repository는 **false**로 설정) 
 
 부가적으로, `http.sslVerify` 옵션은 git 내부적으로 `libcurl` 호출시 SSL 검증을 하지 않도록 작동됩니다.
 
