@@ -1,3 +1,5 @@
+## Multi Thread Server vs Single Thread Server (Slipp 스터디 세미나 내용 정리)
+
 싱글스레드인데 어떻게 더 많은트래픽을 감당할수있는 것일까
 
 process vs thread
