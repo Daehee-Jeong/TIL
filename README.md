@@ -37,6 +37,9 @@ ___
 - [Bulk-Insert 성능에 대해](https://github.com/Daehee-Jeong/TIL/blob/master/SQL/bulk-insert-performance.md)
 
 - [ORACLE PIVOT 함수에 대해](https://github.com/Daehee-Jeong/TIL/blob/master/SQL/oracle-pivot.md)
+
+- [2019 NHN MySQL 최적화 세미나](https://github.com/Daehee-Jeong/TIL/blob/master/SQL/nhn-mysql-optimize-seminar-2019.md)
+
 <br>
 
 ### ETC
