@@ -4,7 +4,7 @@
 
 ex) **80**포트로 들어온 모든 요청을 **81**포트로 포워딩 하는 경우.
 
-설정방법은 다음과 같다.
+설정방법은 다음과 같다. 
 
 ```
 netsh interface portproxy add v4tov4 listenport=80 connectport=81 connectaddress=(내부로 연결할 IP주소)
