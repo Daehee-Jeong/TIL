@@ -24,3 +24,66 @@ public static Boolean valueOf(boolean b) {
 예시인 `Boolean.valueOf(boolean)`의 경우에도 객체를 아예 생성하지 않는다.
 즉 불필요한 객체 생성을 막을 수 있고, 생성 비용이 큰 객체의 경우 성능에도 좋다.
 (비슷한 기법이라고 하는 ***플라이웨이트 패턴*** 에 대해서도 알아보자)
+
+#### 장점-3) 반환 타입의 하위 타입 객체를 반환할 수 있는 능력이 있다.
+**반환할 객체의 클래스를 자유롭게 설정**할 수 있는 장점.
+
+```java
+public class Car {
+    private String carName;
+    private static Car carInstance;
+
+    public Car() {}
+
+    public Car(String carName) {
+        this.carName = carName;
+    }
+
+    public static Car getCar(String carName) {
+        if ("palisade".equals(carName)) {
+            return new Palisade();
+        } else if ("venue".equals(carName)) {
+            return new Venue();
+        }
+
+        return carInstance != null ? carInstance : new Car();
+    }
+
+    public String getCarName() {
+        return this.carName;
+    }
+}
+
+class Palisade extends Car {
+    public Palisade (String carName) {
+        super(carName);
+    }
+}
+
+class Venue extends Car {
+    public Venue (String carName) {
+        super(carName);
+    }
+}
+```
+
+위와 같은 예시가 있다고 가정할 때,
+
+```java
+Car.getCar("palisade").getCarName(); // 하위 객체 Palisade를 반환하고 부모클래스의 메서드 수행
+Car.getCar("venue").getCarName(); // 하위 객체 Venue를 반환하고 부모클래스의 메서드 수행
+```
+
+#### 장점-4) 입력 매개변수에 따라 매번 다른 클래스의 객체를 반환할 수 있다.
+예시로 `EnumSet`의 경우 원소가 64개 이하면 `RegularEnumSet`을, 원소가 65개 이상이면 `JumboEnumSet`의 인스턴스를 반환한다.
+클라이언트는 팩터리가 건네주는 객체가 어느 클래스의 인스턴스인지 알 필요 없다.
+
+#### 장점-5) 정적 팩터리 메서드를 작성하는 시점에는 반환할 객체의 클래스가 존재하지 않아도 된다.
+반환되는 것은 인터페이스이기 때문에 당장은 반환할 객체의 클래스가 존재하지 않아도 된다. 구현은 자손클래스가 한다.
+
+#### 단점-1) 상속을 하려면 public이나 protected 생성자가 필요하기 때문에 정적 팩터리 메서드만 제공하면 하위 클래스를 만들 수 없다.
+(상속시 오류에 대해 정리하기)
+
+#### 단점-2) 정적 팩터리 메서드는 프로그래머가 찾기 어렵다.
+
+___
